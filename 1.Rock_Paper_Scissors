@@ -1,0 +1,31 @@
+import random
+print("Type 0 for Rock\nType 1 for paper\nType 2 for scissor.\n")
+
+rock=0
+paper=1
+scissors=2
+
+Rock="🪨"
+Paper="📰"
+Scissors="✂️"
+
+list=[Rock,Paper,Scissors]
+
+val_1=int(input('Your choice: '))
+
+print(list[val_1])
+val_2=random.randint(0,2)
+print(f'Computer choice: {val_2}')
+print(list[val_2])
+print()
+
+if val_1 == 0 and val_2 == 2:
+    print("Player Wins") 
+elif val_1 == 2 and val_2 == 0: 
+    print("Computer Wins")
+elif val_2>val_1:
+    print("Computer Wins")
+elif val_2<val_1:
+    print("Player Wins")
+else:
+    print("It's a draw")
